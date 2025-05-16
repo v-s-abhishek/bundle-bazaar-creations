@@ -28,6 +28,9 @@ const Navbar = () => {
     setMobileMenuOpen(false);
   };
 
+  // Get user's display name - using email as fallback if name isn't available
+  const displayName = user?.email?.split('@')[0] || 'User';
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
@@ -142,7 +145,7 @@ const Navbar = () => {
             
             {user ? (
               <>
-                <div className="text-lg font-medium">Signed in as {user.name}</div>
+                <div className="text-lg font-medium">Signed in as {displayName}</div>
                 <button
                   onClick={() => {
                     logout();
