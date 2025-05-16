@@ -96,10 +96,6 @@ const Login = () => {
             >
               {isLoading ? "Signing in..." : "Sign in"}
             </Button>
-
-            <div className="text-center text-sm text-muted-foreground">
-              <p>Demo credentials: user@example.com / password</p>
-            </div>
           </form>
         </CardContent>
         <CardFooter className="flex justify-center">
