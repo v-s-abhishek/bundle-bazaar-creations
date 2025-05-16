@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -22,6 +21,7 @@ import {
 import { useCart } from "@/contexts/CartContext";
 import { Separator } from "@/components/ui/separator";
 import { useToast } from "@/components/ui/use-toast";
+import { calculateBundlePrice } from "@/data/products";
 
 const Checkout = () => {
   const { cartItems, cartTotal, clearCart } = useCart();
