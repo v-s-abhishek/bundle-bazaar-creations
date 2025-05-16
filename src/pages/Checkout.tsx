@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -72,6 +73,9 @@ const Checkout = () => {
 
     // Simulate payment processing
     setTimeout(() => {
+      // Store a flag for successful order
+      localStorage.setItem("recent_order", "true");
+      
       // Simulate successful order
       toast({
         title: "Order Placed Successfully!",
@@ -80,7 +84,8 @@ const Checkout = () => {
       
       clearCart();
       setIsSubmitting(false);
-      navigate("/");
+      // Navigate to the order confirmation page instead of home
+      navigate("/order-confirmation");
     }, 2000);
   };
 

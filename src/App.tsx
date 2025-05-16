@@ -15,6 +15,7 @@ import BundleBuilder from "./pages/BundleBuilder";
 import ProductCatalog from "./pages/ProductCatalog";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
+import OrderConfirmation from "./pages/OrderConfirmation";
 import NotFound from "./pages/NotFound";
 
 // Layouts
@@ -39,6 +40,7 @@ const App = () => (
                 <Route path="catalog" element={<ProductCatalog />} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="checkout" element={<Checkout />} />
+                <Route path="order-confirmation" element={<OrderConfirmation />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
